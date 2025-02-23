@@ -1,0 +1,32 @@
+h1{
+    /* color: #ff0099;
+    background-color: blueviolet;
+    cursor: e-resize;
+    background: burlywood;
+    text-align: justify;
+    width: 50%;
+    font-weight: bold;
+    text-decoration: black underline wavy; */
+    font-family: Copperplate;
+    
+}
+p{
+    color: rgb(209, 25, 25);
+    background-color: azure;
+    text-align:center;
+    /* font-weight: 700;
+    text-decoration:red underline double;
+    line-height: 2;
+    letter-spacing: 3px;
+    font-size: 12px; */
+    font-family:Fantasy;
+}
+button{
+    color: #e3dee1;
+    background-color: chocolate;
+    font-size: xx-large;
+    text-decoration: dotted line-through;
+}
+a{
+    text-decoration: none;
+}
