@@ -1,0 +1,19 @@
+/* div p{
+    background-color: blueviolet;
+}
+.para{
+    background-color: cadetblue;
+}
+p{
+    background-color: red;
+} */
+
+div.greetDiv .greet{
+    color: greenyellow;
+}
+.greetDiv p.greet{
+    color: brown;
+}
+.greetDiv .greet{
+    color: blue;
+}

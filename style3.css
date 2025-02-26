@@ -1,0 +1,21 @@
+/* div{
+    background-color: blue;
+}
+p{
+    background-color: aqua;
+} */
+div{
+    background-color: aqua;
+}
+form{
+    background-color: chartreuse;
+}
+input{
+    background-color: inherit;
+}
+button{
+    background-color: inherit;
+}
+button:hover{
+    background-color: red;
+}

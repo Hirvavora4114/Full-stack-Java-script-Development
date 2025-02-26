@@ -1,3 +1,6 @@
+h3{
+    background-color: blue !important;
+}
 /* element selector */
 h1,h3{
     color:#ed5108
