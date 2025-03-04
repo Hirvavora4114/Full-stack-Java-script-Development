@@ -1,0 +1,17 @@
+div{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    /* transition: 1s 1s; */
+    /* transition-duration: 1s;
+    transition-delay: 1s; */
+    margin: 0 auto;
+    margin-top: 10px;
+    transition: margin-top 2s ease 0.2s;
+}
+
+div:hover{
+    /* background-color: chocolate;
+    border-radius: 50%; */
+    margin-top: 300px;
+}
