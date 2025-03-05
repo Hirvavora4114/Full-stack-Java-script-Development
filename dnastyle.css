@@ -1,0 +1,58 @@
+body {
+    background: #000;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 50em;
+    overflow: hidden;
+}
+
+.dna {
+    --h: .6em;
+    --s: 7s;
+    margin: calc(2*var(--h)) auto;
+    aspect-ratio: 7/1;
+    height: var(--h);
+    animation: r var(--s) linear calc(var(--i)/-10 * var(--s)) infinite;
+}
+
+.dna i {
+    position: absolute;
+    inset: calc((1 - 0.577) * 50%) calc(var(--h) / -10);
+    transform: translateZ(calc(var(--h) / 2)) rotateX(180deg);
+    background: linear-gradient(#0004, #0000, #0004);
+    background-color: hsl(calc(30 * var(--i)), 100%, 70%);
+    display: grid;
+}
+
+.dna i:nth-child(2) {
+    transform: translateZ(calc(var(--h) / -2));
+}
+
+.dna i::before,
+.dna i::after {
+    content: "";
+    grid-area: 1/1;
+    background: inherit;
+    transform-origin: top;
+    transform: rotateX(120deg);
+}
+
+.dna i:after {
+    transform-origin: bottom;
+    transform: rotateX(120deg);
+}
+
+.dna:before,
+.dna:after {
+    content: "";
+    position: absolute;
+    width: calc(4 * var(--h));
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    top: calc(50% - 2 * var(--h));
+    background: radial-gradient(circle at top, #0000, #000);
+    background-color: hsl(180, 100%, 50%); /* Adjust this color to fit your design */
+}
