@@ -1,83 +1,202 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
 }
 
-html,body{
-    font-family: "Poppins", sans-serif;
-    background-color: #f4f4f4;
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+    background: #336E2E;
+    color: #fff;
 }
 
-.wrapper{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+main{
+    height: 95vh;
+    width: 95vw;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(140deg,#72A436,#336E2E);
+    border-radius: 5px;
+    display: flex;
+}
+
+section{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+aside{
+    width: 5%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(to top,#5B9235,transparent);
+}
+
+aside .menu{
+    font-size: 30px;
+}
+
+.social-icons{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    border: 1px solid #fff;
+    opacity: 0.8;
+}
+
+.social-icons a{
+    text-decoration: none;
+    color: #fff;
+}
+
+aside .social-bar{
+    height: 150px;
+    width: 1px;
+    background: #fff;
+    opacity: 0.7;
+}
+
+section nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 8%;
+    padding: 10px 20px;
+}
+
+nav .logo{
+    font-size: 18px;
+    margin-right: auto;
+}
+
+.logo span{
+    font-weight: 900;
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-left: 20px;
+    opacity: 0.9;
+}
+
+nav a:last-child{
+    margin-right: auto;
 }
 
 .container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.wrapper h1{
-    margin: 20px auto;
-    text-align: center;
-    font-size: 40px;
-    color: rgb(51, 51, 51);
-    /* color: #333333; */
-}
-
-.card{
-    width: 32%;
-    overflow: hidden;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    position: relative;
-    transition: 0.5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card img{
-    height: 100%;
     width: 100%;
-    filter: grayscale(100%);
-    object-fit: cover;
+    height: 92%;
+    position: relative;
 }
 
-.card:hover{
-    transform: scale(1.03);
-    filter: drop-shadow(0 0 10px #333);
-}
-
-.card:hover img{
-    filter: grayscale(0);
-}
-
-.card figcaption{
+img{
     position: absolute;
-    bottom: 0;
-    width: fit-content;
-    height: 16%;
-    background: linear-gradient(0deg, rgba(0,0,0,0.2)0%,
-    rgba(255,255,255,0) 100%);
-    color: #fff;
-    padding: 25px;
-    opacity: 0;
-    text-align: center;
-    font-weight: 700;
-    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    height: 450px;
+    filter: drop-shadow(40px 50px 25px #112801);
+    z-index: 3;
 }
 
-.card:hover figcaption{
-    opacity: 1;
-    bottom: 40%;
-    transform: translateY(-50%) rotate(360deg);
-    transition: 1s;
+.container h1{
+    position: absolute;
+    font-size: 200px;
+    z-index: 2;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,20%);
+    text-shadow: 2px 2px 2px #1128015b;
+    letter-spacing: 5px;
+    opacity: 0.9;
+}
+
+.container .b-pagination{
+    display: flex;
+    margin-left: 15%;
+    margin-top: 50px;
+}
+
+.container .b-pagination small{
+    font-size: 14px;
+    opacity: 0.8;
+    align-self: flex-end;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.container .b-pagination span{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container .b-pagination .b-bar{
+    width: 250px;
+    height: 1px;
+    background: #fff;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.container .heading{
+    font-size: 60px;
+    font-weight: 700;
+    opacity: 0.9;
+    text-shadow: 1px 1px 1px #112801;
+    margin-left: 8%;
+    line-height: 1;
+    margin-top: 20px;
+    letter-spacing: 3px;
+}
+
+.container p{
+    width: 380px;
+    margin-left: 8%;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+button{
+    font-size: 12px;
+    margin-left: 8%;
+    padding: 10px 25px;
+    background: none;
+    border: 1px solid #fff;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.container .pagination{
+    margin-left: 8%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.pagination .bar{
+    width: 250px;
+    height: 1px;
+    background: #fff;
+    opacity: 0.7;
 }
